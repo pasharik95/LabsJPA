@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="LabsJPA" transaction-type="RESOURCE_LOCAL">
+	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+			
+			<class>ua.workshop.db.jpa.DomainSuperClass</class>
+        	<class>ua.workshop.db.jpa.Car</class>
+        	<class>ua.workshop.db.jpa.ColorOfCar</class>
+        	<class>ua.workshop.db.jpa.Client</class>
+        	<class>ua.workshop.db.jpa.Detail</class>
+        	<class>ua.workshop.db.jpa.MarkOfCar</class>
+        	<class>ua.workshop.db.jpa.ModelOfCar</class>
+        	<class>ua.workshop.db.jpa.Operation</class>
+        	<class>ua.workshop.db.jpa.Order</class>
+        	<class>ua.workshop.db.jpa.Process</class>
+        	<class>ua.workshop.db.jpa.ProcessHasDetail</class>
+        	<class>ua.workshop.db.jpa.StandartDetail</class>
+        	<class>ua.workshop.db.jpa.Worker</class>
+			 
+			 <properties>
+				<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+				<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/workshop"/>
+				<property name="javax.persistence.jdbc.user" value="root"/>
+				<property name="javax.persistence.jdbc.password" value="1111"/>
+			 </properties>
+	</persistence-unit>
+</persistence>
