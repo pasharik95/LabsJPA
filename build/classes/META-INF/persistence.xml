@@ -3,7 +3,8 @@
 	<persistence-unit name="LabsJPA" transaction-type="RESOURCE_LOCAL">
 	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 			
-			<class>ua.workshop.db.jpa.DomainSuperClass</class>
+			<!-- <class>ua.workshop.db.jpa.DomainSuperClass</class>-->
+			
         	<class>ua.workshop.db.jpa.Car</class>
         	<class>ua.workshop.db.jpa.ColorOfCar</class>
         	<class>ua.workshop.db.jpa.Client</class>
@@ -18,10 +19,23 @@
         	<class>ua.workshop.db.jpa.Worker</class>
 			 
 			 <properties>
+			 <!-- 
 				<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 				<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/workshop"/>
 				<property name="javax.persistence.jdbc.user" value="root"/>
 				<property name="javax.persistence.jdbc.password" value="1111"/>
-			 </properties>
+			-->
+ 			<!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+ 		    <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+ 		    <property name="javax.persistence.schema-generation.scripts.create-target" value="sampleCreate.ddl"/>
+ 		    <property name="javax.persistence.schema-generation.scripts.drop-target" value="sampleDrop.ddl"/>
+ 			 
+ 			<property name="javax.persistence.sql-load-script-source" value="insert.sql"/>-->
+			
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/workshop_from_classes"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="1111"/> 			
+			</properties>	
 	</persistence-unit>
 </persistence>
